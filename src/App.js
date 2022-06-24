@@ -19,23 +19,24 @@ function App() {
 			console.log('light mode enabled');
 		}
 	};
-
+	
 	return (
+		<>
 		<div className="App">
 			<Navbar title="Horizon Media" mode={mode} toggleMode={toggleMode} />
 			<BrowserRouter>
 				<Routes>
-					<Route path="/" element={<News country={'in'} category={'general'} />} />
-					<Route path="/business" element={<News country={'in'} category={'business'} />} />
-					<Route path="/entertainment" element={<News country={'in'} category={'entertainment'} />} />
-					<Route path="/health" element={<News country={'in'} category={'health'} />} />
-					<Route path="/science" element={<News country={'in'} category={'science'} />} />
-					<Route path="/science" element={<News country={'in'} category={'sports'} />} />
-					<Route path="/technology" element={<News country={'in'} category={'technology'} />} />
+					<Route path="/" element={<News country={'in'} category={'general'} pageSize={9}/>} />
+					<Route path="/business" element={<News country={'in'} category={'business'} pageSize={9}/>} />
+					<Route path="/entertainment" element={<News country={'in'} category={'entertainment'} pageSize={9}/>} />
+					<Route path="/health" element={<News country={'in'} category={'health'} pageSize={9}/>} />
+					<Route path="/science" element={<News country={'in'} category={'science'} pageSize={9}/>} />
+					<Route path="/science" element={<News country={'in'} category={'sports'} pageSize={9}/>} />
+					<Route path="/technology" element={<News country={'in'} category={'technology'} pageSize={9}/>} />
 				</Routes>
 			</BrowserRouter>
-
 		</div>
+		</>
 	);
 }
 
