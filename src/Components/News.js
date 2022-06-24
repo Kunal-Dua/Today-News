@@ -32,7 +32,7 @@ export default function News(props) {
 				{articles.map((element) => {
 					return (
 						<div className="col-md-4 my-3" key={element.url}>
-							<NewsItem title={element.title} description={element.description} imgUrl={element.urlToImage?element.urlToImage:top_headline} newsUrl={element.url} author={element.author} date={element.publishedAt}/></div>
+							<NewsItem title={element.title} description={element.description} imgUrl={element.urlToImage?element.urlToImage:top_headline} newsUrl={element.url} author={element.author} date={element.publishedAt} source={element.source.name}/></div>
 					);
 				})}
 			</div>
