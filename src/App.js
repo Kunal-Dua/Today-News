@@ -1,8 +1,7 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import Navbar from './Components/Navbar.js'
-import Heading from './Components/Heading';
-import NewsItem from './Components/NewsItem'
+import News from './Components/News'
 import React, { useState } from 'react';
 
 function App() {
@@ -24,8 +23,7 @@ function App() {
   return (
     <div className="App">
       <Navbar title="News Today" mode={mode} toggleMode={toggleMode} />
-      <Heading heading="News Today" mode={mode}/>
-      <NewsItem/>
+      <News/>
     </div>
   );
 }
