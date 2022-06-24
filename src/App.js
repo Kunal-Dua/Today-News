@@ -22,8 +22,8 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar title="News Today" mode={mode} toggleMode={toggleMode} />
-      <News/>
+      <Navbar title="Horizon Media" mode={mode} toggleMode={toggleMode} />
+      <News country={"in"} category = {"general"}/>
     </div>
   );
 }
