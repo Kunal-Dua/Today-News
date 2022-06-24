@@ -11,7 +11,7 @@ function App() {
 	const toggleMode = () => {
 		if (mode === 'light') {
 			setMode('dark');
-			document.body.style.backgroundColor = '#030d7e';
+			document.body.style.backgroundColor = '#000544';
 			console.log('dark mode enabled');
 		} else {
 			setMode('light');
@@ -23,7 +23,6 @@ function App() {
 	return (
 		<div className="App">
 			<Navbar title="Horizon Media" mode={mode} toggleMode={toggleMode} />
-
 			<BrowserRouter>
 				<Routes>
 					<Route path="/" element={<News country={'in'} category={'general'} />} />
@@ -35,7 +34,7 @@ function App() {
 					<Route path="/technology" element={<News country={'in'} category={'technology'} />} />
 				</Routes>
 			</BrowserRouter>
-			
+
 		</div>
 	);
 }
