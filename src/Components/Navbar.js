@@ -13,8 +13,8 @@ export default function Navbar(props) {
             <li className="nav-item"><a className="nav-link active" aria-current="page" href="/entertainment">Entertainment</a></li>
             <li className="nav-item"><a className="nav-link active" aria-current="page" href="/health"> Health</a></li>
             <li className="nav-item"><a className="nav-link active" aria-current="page" href="/science">Science</a></li>
-            <li className="nav-item"><a className="nav-link active" aria-current="page" href="/science">Sports</a></li>
-            <li className="nav-item"><a className="nav-link active" aria-current="page" href="/science">Technology</a></li>
+            <li className="nav-item"><a className="nav-link active" aria-current="page" href="/sports">Sports</a></li>
+            <li className="nav-item"><a className="nav-link active" aria-current="page" href="/technology">Technology</a></li>
           </ul>
         </div>
 
