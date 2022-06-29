@@ -30,7 +30,7 @@ function App() {
 					<Route path="/entertainment" element={<News country={'in'} category={'entertainment'} pageSize={9}/>} />
 					<Route path="/health" element={<News country={'in'} category={'health'} pageSize={9}/>} />
 					<Route path="/science" element={<News country={'in'} category={'science'} pageSize={9}/>} />
-					<Route path="/science" element={<News country={'in'} category={'sports'} pageSize={9}/>} />
+					<Route path="/sports" element={<News country={'in'} category={'sports'} pageSize={9}/>} />
 					<Route path="/technology" element={<News country={'in'} category={'technology'} pageSize={9}/>} />
 				</Routes>
 			</BrowserRouter>
