@@ -7,7 +7,7 @@ import top_headline from './top_headline.jpeg';
 export default function News(props) {
 	const [articles, setArticles] = useState([]);
 	const [loading, setLoading] = useState(true);
-	const [pageNumber, setPageNumber] = useState(1);
+	// const [pageNumber, setPageNumber] = useState(1);
 
 	const fetchData = async () => {
 		const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&apiKey=382298ce2f6445fe9130f0c1cc9939ff&category=${props.category}&pageSize=${props.pageSize}`;
@@ -37,8 +37,8 @@ export default function News(props) {
 				})}
 			</div>
 			<div className='container d-flex justify-content-between'>
-				<button type="button" class="btn btn-primary">&larr; Previous</button>
-				<button type="button" class="btn btn-primary">Next &rarr;</button>
+				<button type="button" className="btn btn-primary">&larr; Previous</button>
+				<button type="button" className="btn btn-primary">Next &rarr;</button>
 			</div>
 		</div>
 	);
