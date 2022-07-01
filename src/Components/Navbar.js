@@ -1,10 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import icon from './horizon media icon.jpg'
 export default function Navbar(props) {
 
   return (
     <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
+        { /*image => <Link className="navbar-brand ms-4" to="/"><img src={icon} alt="horizon media icon" width="30" height="24" className="d-inline-block align-text-top" /></Link> */}
       <div className={`container-fluid`}> <Link className="navbar-brand text-primary" to="/" >{props.title}</Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span className="navbar-toggler-icon"></span></button>
 
@@ -19,9 +21,9 @@ export default function Navbar(props) {
             <li className="nav-item"><Link className="nav-link active" aria-current="page" to="/technology">Technology</Link></li>
           </ul>
         </div>
-        <button className = {`btn btn-${props.mode === "light" ? "primary" : "dark"} mx-3`} onClick={props.newCountry}>Change Country</button>
+        <button className={`btn btn-${props.mode === "light" ? "primary" : "dark"} mx-3`} onClick={props.newCountry}>Change Country</button>
         <div className={`form-check form-switch text-${props.mode === "light" ? "dark" : "light"}`}>
-          <input className="form-check-input" type="checkbox" onClick={props.toggleMode} role="switch" id="flexSwitchCheckDefault"/>
+          <input className="form-check-input" type="checkbox" onClick={props.toggleMode} role="switch" id="flexSwitchCheckDefault" />
           <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Enable Dark Mode</label>
         </div>
       </div>
