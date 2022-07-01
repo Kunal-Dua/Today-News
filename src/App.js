@@ -35,13 +35,13 @@ function App() {
 			<Router>
 			<Navbar title="Horizon Media" mode={mode} toggleMode={toggleMode} country={country} newCountry={changeCountry}/>
 				<Routes>
-					<Route exact path="/" element={<News country={country} category={'general'} pageSize={9} countryBool={countryBool}/>} />
-					<Route exact path="/business" element={<News country={country} category={'business'} pageSize={9} countryBool={countryBool}/>} />
-					<Route exact path="/entertainment" element={<News country={country} category={'entertainment'} pageSize={9} countryBool={countryBool}/>} />
-					<Route exact path="/health" element={<News country={country} category={'health'} pageSize={9} countryBool={countryBool}/>} />
-					<Route exact path="/science" element={<News country={country} category={'science'} pageSize={9} countryBool={countryBool}/>} />
-					<Route exact path="/sports" element={<News country={country} category={'sports'} pageSize={9} countryBool={countryBool}/>} />
-					<Route exact path="/technology" element={<News country={country} category={'technology'} pageSize={9} countryBool={countryBool}/>} />
+					<Route exact path="/" element={<News country={country} category={'general'} pageSize={9} toggleMode={toggleMode} countryBool={countryBool}/>} />
+					<Route exact path="/business" element={<News country={country} category={'business'} pageSize={9} toggleMode={toggleMode} countryBool={countryBool}/>} />
+					<Route exact path="/entertainment" element={<News country={country} category={'entertainment'} pageSize={9} toggleMode={toggleMode} countryBool={countryBool}/>} />
+					<Route exact path="/health" element={<News country={country} category={'health'} pageSize={9} toggleMode={toggleMode} countryBool={countryBool}/>} />
+					<Route exact path="/science" element={<News country={country} category={'science'} pageSize={9} toggleMode={toggleMode} countryBool={countryBool}/>} />
+					<Route exact path="/sports" element={<News country={country} category={'sports'} pageSize={9} toggleMode={toggleMode} countryBool={countryBool}/>} />
+					<Route exact path="/technology" element={<News country={country} category={'technology'} pageSize={9} toggleMode={toggleMode} countryBool={countryBool}/>} />
 				</Routes>
 			</Router>
 		</div>
