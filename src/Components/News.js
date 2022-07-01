@@ -31,7 +31,7 @@ export default function News(props) {
 
 	return (
 		<div className="container">
-			<h2 className="text-center my-4">Horizon Media</h2>
+			<h2 className={`text-center text-primary my-4`}>Horizon Media</h2>
 			{loading && <Spinner />}
 			<div className="row">
 				{articles.map((element) => {
