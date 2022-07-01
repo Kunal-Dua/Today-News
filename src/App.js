@@ -2,10 +2,20 @@ import './App.css';
 import Navbar from './Components/Navbar.js';
 import News from './Components/News';
 import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes,Route} from 'react-router-dom';
 
 function App() {
 	const [ mode, setMode ] = useState('light');
+	const [country, setCountry] = useState('in');
+	const [countryBool, setcountryBool] = useState(false)
+
+	const changeCountry=()=>{
+		countryBool===false?setcountryBool(true):setcountryBool(false);
+		country === 'in' ? setCountry('us') : setCountry('in');
+		// console.log("in change country function "+country);
+		// console.log("in change countryBool "+countryBool);
+		// console.log("rendering...");
+	}
 
 	const toggleMode = () => {
 		if (mode === 'light') {
@@ -22,18 +32,18 @@ function App() {
 	return (
 		<>
 		<div className="App">
-			<Navbar title="Horizon Media" mode={mode} toggleMode={toggleMode} />
-			<BrowserRouter>
+			<Router>
+			<Navbar title="Horizon Media" mode={mode} toggleMode={toggleMode} country={country} newCountry={changeCountry}/>
 				<Routes>
-					<Route path="/" element={<News country={'in'} category={'general'} pageSize={9}/>} />
-					<Route path="/business" element={<News country={'in'} category={'business'} pageSize={9}/>} />
-					<Route path="/entertainment" element={<News country={'in'} category={'entertainment'} pageSize={9}/>} />
-					<Route path="/health" element={<News country={'in'} category={'health'} pageSize={9}/>} />
-					<Route path="/science" element={<News country={'in'} category={'science'} pageSize={9}/>} />
-					<Route path="/sports" element={<News country={'in'} category={'sports'} pageSize={9}/>} />
-					<Route path="/technology" element={<News country={'in'} category={'technology'} pageSize={9}/>} />
+					<Route exact path="/" element={<News country={country} category={'general'} pageSize={9} countryBool={countryBool}/>} />
+					<Route exact path="/business" element={<News country={country} category={'business'} pageSize={9} countryBool={countryBool}/>} />
+					<Route exact path="/entertainment" element={<News country={country} category={'entertainment'} pageSize={9} countryBool={countryBool}/>} />
+					<Route exact path="/health" element={<News country={country} category={'health'} pageSize={9} countryBool={countryBool}/>} />
+					<Route exact path="/science" element={<News country={country} category={'science'} pageSize={9} countryBool={countryBool}/>} />
+					<Route exact path="/sports" element={<News country={country} category={'sports'} pageSize={9} countryBool={countryBool}/>} />
+					<Route exact path="/technology" element={<News country={country} category={'technology'} pageSize={9} countryBool={countryBool}/>} />
 				</Routes>
-			</BrowserRouter>
+			</Router>
 		</div>
 		</>
 	);
